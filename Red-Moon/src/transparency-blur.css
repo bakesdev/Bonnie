@@ -1,0 +1,57 @@
+@property --panel-blur {
+    syntax: 'off | on';
+    inherits: false;
+    initial-value: off;
+}
+
+@container body style(--panel-blur: on) {
+    #app-mount {
+        --panel-backdrop-filter: blur(var(--blur-amount));
+    }
+
+    .popoverReactionHoverBar_f84418 /* message hover quick action bar */,
+        .c36707910f687430-tooltip /* tooltips */ {
+        background: var(--bg-floating);
+    }
+    .c1e9c47c23f12ca3-menu /* context menus */,
+        ._084343c4f11eaaab-contentWrapper /* emoji/gif panel */,
+        ._49fc18ba07c5025f-root /* modals like invite */,
+        .c0bea05627c5dc35-outer.user-profile-popout:not(.custom-theme-background) /* small profile popup */,
+        ._6b0e07cbaf13ec4e-autocomplete /* autocomplete */,
+        ._55c999adcf6db265-container /* search suggestions */,
+        .e8b59c4b335dd2fc-messagesPopoutWrap /* inbox */,
+        ._76f047ded9fef6d4-popout /* channel hover popout */,
+        ._7aaec78b97ff00f7-bar /* channel list new unreads bar */ {
+        background: var(--bg-floating);
+    }
+}
+
+@property --transparency-tweaks {
+    syntax: 'off | on';
+    inherits: false;
+    initial-value: off;
+}
+
+@container body style(--transparency-tweaks: on) {
+    ._9293f6b2fc12398a-children:after {
+        display: none;
+    }
+    ._36d072eab2b2e737-chatGradient {
+        display: none;
+    }
+    .f75fb00fb7356cbe-form {
+        margin-top: 0;
+    }
+}
+
+@property --remove-bg-layer {
+    syntax: 'off | on';
+    inherits: false;
+    initial-value: off;
+}
+
+@container body style(--remove-bg-layer: on) {
+    ._960e4207cea8323e-bg {
+        background: transparent !important;
+    }
+}
